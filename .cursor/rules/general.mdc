@@ -1,0 +1,51 @@
+---
+description: 
+globs: 
+alwaysApply: true
+---
+You are an expert in TypeScript, Node.js, Next.js App Router, React, Shadcn UI, Radix UI and Tailwind.
+
+# Technical Stacks:
+- Framework: Next.js v15.3.1 (App Router)
+- UI Library: Shadcn UI (based on Radix UI)
+- Styling: Tailwind CSS v4 (no config file)
+- State Management: Zustand
+- Form Handling: React Hook Form
+- Animation: Framer Motion
+- Icons: Lucide React
+- Linting: ESLint
+- Formatting: Prettier
+- Git Hooks: Husky (used for pre-commit checks)
+- Package Manager: Bun
+
+# Project Structure: 
+.
+├── .github/            # CI/CD workflows
+├── .husky/             # Git hook scripts
+├── .vscode/            # Editor configs
+├── public/             # Static assets
+├── src/
+│   ├── app/            # Next.js App Router (routes & layouts)
+│   │   ├── api/        # API route handler
+│   │   ├── playground/ # UI component demo page
+│   │   └── [route]/        # Other routes
+│   ├── assets/         # Images, SVGs, etc.
+│   ├── components/
+│   │   ├── [page]/     # Page-specific, non-reusable components
+│   │   ├── common/     # Shared components across app
+│   │   ├── layouts/    # Layout structures
+│   │   └── ui/         # UI primitives from Shadcn UI
+│   ├── constants/      # App-wide constants
+│   ├── hooks/          # Custom hooks
+│   ├── lib/            # Utility libraries/helpers
+│   ├── providers/      # Context providers (e.g., for Zustand)
+│   ├── types/          # TypeScript type definitions
+│   └── utils/          # General utility functions
+├── .env.example        # Example env file
+├── eslint.config.mjs
+├── next.config.ts
+├── postcss.config.mjs
+├── tsconfig.json
+├── components.json     # Shadcn UI component registry
+├── bun.lock
+└── README.md

@@ -1,0 +1,96 @@
+---
+description: 
+globs: 
+alwaysApply: true
+---
+# Next.JS 15 and ReactJS
+
+## Code Style and Structure
+- Write concise, technical TypeScript code with accurate examples.
+- Use functional and declarative programming patterns; avoid classes.
+- Prefer iteration and modularization over code duplication.
+- Use descriptive variable names with auxiliary verbs (e.g., isLoading, hasError).
+- Structure files: exported component, subcomponents, helpers, static content, types.
+- Update playground if update UI component
+- A file contains only 1 component
+- Do not pass components through any props other than children
+- Limit passing functions through component props
+- If the action changes the state of a single component, use the state in that component itself.
+- If the action changes the state of another component, use global state management with the technology in use (e.g. zustand, redux,...)
+- Prefer use Next.JS function and component than legacy in React
+
+## Naming Conventions
+- Use lowercase with dashes for directories (e.g., components/auth-wizard).
+- Favor named exports for components.
+
+## TypeScript Usage
+- Use TypeScript for all code; prefer interfaces over types.
+- Avoid enums, use maps instead.
+- Use functional components with TypeScript interfaces.
+
+## Syntax and Formatting
+- Use the "function" keyword for pure functions.
+- Avoid unnecessary curly braces in conditionals; use concise syntax for simple statements.
+- Use declarative JSX.
+
+## Components
+- Use Server Components by default.
+- Mark client components explicitly with 'use client'.
+- Wrap client components in Suspense with fallback.
+- Implement proper error boundaries.
+- Place static content and interfaces at file end.
+- Use dynamic loading for non-critical components.
+
+## UI and Styling
+- Prefer use my styled UI component, Shadcn UI, Radix, and Tailwind for components and styling.
+- Implement responsive design with Tailwind CSS. 
+- Use a mobile-first approach.
+
+## Data Fetching
+- Use Server Components for data fetching when possible.
+- Implement proper error handling for data fetching.
+- Use appropriate caching strategies.
+- Handle loading and error states appropriately.
+- Prefer fetch API data using Next.js route handler.
+
+## Forms and Validation
+- Use Zod for form validation.
+- Implement proper server-side validation.
+- Handle form errors appropriately.
+- Show loading states during form submission.
+
+## Forms and Validation
+- Use Zod for form validation.
+- Implement proper server-side validation.
+- Handle form errors appropriately.
+- Show loading states during form submission.
+
+## Routing
+- Use the App Router conventions.
+- Implement proper loading and error states for routes.
+- Use dynamic routes appropriately.
+- Handle parallel routes when needed.
+- Prefer using Link component instead of useRouter hook.
+
+## State Management
+- Minimize client-side state.
+- Use React Context sparingly.
+- Prefer server state when possible.
+- Implement proper loading states.
+
+## Performance Optimization
+- Minimize 'use client', 'useEffect', and 'setState'.
+- Don't use 'use client' for pages and layout. Only use use client for small components, UI components and when really necessary.
+- Don't use hooks for page and layout
+- Favor React Server Components (RSC).
+- Optimize images: use WebP format, include size data, implement lazy loading.
+- Split components to the smallest level.
+
+## Key Conventions
+- Optimize Web Vitals (LCP, CLS, FID).
+- Limit 'use client'.
+- Favor server components and Next.js SSR.
+- Use only for Web API access in small components.
+- Avoid for data fetching or state management.
+
+Follow Next.js docs for Data Fetching, Rendering, and Routing.

@@ -7,7 +7,7 @@ export function SuccessToast() {
   return (
     <Button
       onClick={() => toast.success("Operation completed successfully")}
-      variant="outline">
+      variant="outlined">
       Success Toast
     </Button>
   );
@@ -17,7 +17,7 @@ export function ErrorToast() {
   return (
     <Button
       onClick={() => toast.error("An error occurred")}
-      variant="outline">
+      variant="outlined">
       Error Toast
     </Button>
   );
@@ -31,7 +31,7 @@ export function DescriptionToast() {
           description: "Your item has been saved to the database.",
         })
       }
-      variant="outline">
+      variant="outlined">
       With Description
     </Button>
   );

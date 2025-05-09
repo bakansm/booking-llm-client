@@ -1,4 +1,7 @@
 import { EditorOptionsDropdown } from "@/components/playground/dropdown-menu/editor-options-dropdown";
+import { FilterDropdown } from "@/components/playground/dropdown-menu/filter-dropdown";
+import { FormDropdown } from "@/components/playground/dropdown-menu/form-dropdown";
+import { IconDropdown } from "@/components/playground/dropdown-menu/icon-dropdown";
 import { ThemeDropdown } from "@/components/playground/dropdown-menu/theme-dropdown";
 import { Button } from "@/components/ui/button";
 import {
@@ -31,7 +34,7 @@ export default function DropdownMenuPage() {
           <div className="max-w-md">
             <DropdownMenu>
               <DropdownMenuTrigger asChild>
-                <Button variant="outline">Open Menu</Button>
+                <Button variant="outlined">Open Menu</Button>
               </DropdownMenuTrigger>
               <DropdownMenuContent>
                 <DropdownMenuLabel>My Account</DropdownMenuLabel>
@@ -39,7 +42,7 @@ export default function DropdownMenuPage() {
                 <DropdownMenuItem>Profile</DropdownMenuItem>
                 <DropdownMenuItem>Settings</DropdownMenuItem>
                 <DropdownMenuSeparator />
-                <DropdownMenuItem>Logout</DropdownMenuItem>
+                <DropdownMenuItem variant="error">Logout</DropdownMenuItem>
               </DropdownMenuContent>
             </DropdownMenu>
           </div>
@@ -64,7 +67,7 @@ export default function DropdownMenuPage() {
               <h3 className="mb-2 text-lg font-medium">Submenu</h3>
               <DropdownMenu>
                 <DropdownMenuTrigger asChild>
-                  <Button variant="outline">More Options</Button>
+                  <Button variant="outlined">More Options</Button>
                 </DropdownMenuTrigger>
                 <DropdownMenuContent>
                   <DropdownMenuItem>Account</DropdownMenuItem>
@@ -93,7 +96,7 @@ export default function DropdownMenuPage() {
               <h3 className="mb-2 text-lg font-medium">With Shortcuts</h3>
               <DropdownMenu>
                 <DropdownMenuTrigger asChild>
-                  <Button variant="outline">File</Button>
+                  <Button variant="outlined">File</Button>
                 </DropdownMenuTrigger>
                 <DropdownMenuContent>
                   <DropdownMenuItem>
@@ -116,54 +119,80 @@ export default function DropdownMenuPage() {
               <h3 className="mb-2 text-lg font-medium">Destructive Item</h3>
               <DropdownMenu>
                 <DropdownMenuTrigger asChild>
-                  <Button variant="destructive">Danger</Button>
+                  <Button
+                    variant="contained"
+                    color={"error"}>
+                    Danger
+                  </Button>
                 </DropdownMenuTrigger>
                 <DropdownMenuContent>
-                  <DropdownMenuItem variant="destructive">
-                    Delete
-                  </DropdownMenuItem>
+                  <DropdownMenuItem variant="error">Delete</DropdownMenuItem>
                 </DropdownMenuContent>
               </DropdownMenu>
+            </div>
+            {/* With Icons */}
+            <div className="w-72">
+              <h3 className="mb-2 text-lg font-medium">With Icons</h3>
+              <IconDropdown />
             </div>
           </div>
         </section>
 
-        {/* Examples Section */}
+        {/* Advanced Examples Section */}
         <section>
-          <h2 className="mb-4 text-xl font-semibold">Examples</h2>
-          <div className="grid gap-8">
+          <h2 className="mb-4 text-xl font-semibold">Advanced Examples</h2>
+          <div className="grid gap-12">
+            {/* Form in Dropdown */}
             <div className="flex flex-col gap-4">
-              <h3 className="text-lg font-medium">User Menu</h3>
+              <h3 className="text-lg font-medium">Form in Dropdown</h3>
               <div className="max-w-md">
-                <DropdownMenu>
-                  <DropdownMenuTrigger asChild>
-                    <Button variant="outline">User</Button>
-                  </DropdownMenuTrigger>
-                  <DropdownMenuContent>
-                    <DropdownMenuLabel>Account</DropdownMenuLabel>
-                    <DropdownMenuSeparator />
-                    <DropdownMenuItem>Profile</DropdownMenuItem>
-                    <DropdownMenuItem>Settings</DropdownMenuItem>
-                    <DropdownMenuSeparator />
-                    <DropdownMenuItem>Logout</DropdownMenuItem>
-                  </DropdownMenuContent>
-                </DropdownMenu>
+                <FormDropdown />
               </div>
             </div>
+
+            {/* Filtering UI */}
             <div className="flex flex-col gap-4">
-              <h3 className="text-lg font-medium">Context Menu</h3>
-              <div className="max-w-md">
-                <DropdownMenu>
-                  <DropdownMenuTrigger asChild>
-                    <Button variant="outline">Right Click Me</Button>
-                  </DropdownMenuTrigger>
-                  <DropdownMenuContent>
-                    <DropdownMenuItem>Copy</DropdownMenuItem>
-                    <DropdownMenuItem>Paste</DropdownMenuItem>
-                    <DropdownMenuSeparator />
-                    <DropdownMenuItem>Inspect</DropdownMenuItem>
-                  </DropdownMenuContent>
-                </DropdownMenu>
+              <h3 className="text-lg font-medium">Filtering Interface</h3>
+              <div className="max-w-xl">
+                <FilterDropdown />
+              </div>
+            </div>
+
+            {/* Basic Examples */}
+            <div className="grid grid-cols-1 gap-8 md:grid-cols-2">
+              <div className="flex flex-col gap-4">
+                <h3 className="text-lg font-medium">User Menu</h3>
+                <div className="max-w-md">
+                  <DropdownMenu>
+                    <DropdownMenuTrigger asChild>
+                      <Button variant="outlined">User</Button>
+                    </DropdownMenuTrigger>
+                    <DropdownMenuContent>
+                      <DropdownMenuLabel>Account</DropdownMenuLabel>
+                      <DropdownMenuSeparator />
+                      <DropdownMenuItem>Profile</DropdownMenuItem>
+                      <DropdownMenuItem>Settings</DropdownMenuItem>
+                      <DropdownMenuSeparator />
+                      <DropdownMenuItem>Logout</DropdownMenuItem>
+                    </DropdownMenuContent>
+                  </DropdownMenu>
+                </div>
+              </div>
+              <div className="flex flex-col gap-4">
+                <h3 className="text-lg font-medium">Context Menu</h3>
+                <div className="max-w-md">
+                  <DropdownMenu>
+                    <DropdownMenuTrigger asChild>
+                      <Button variant="outlined">Right Click Me</Button>
+                    </DropdownMenuTrigger>
+                    <DropdownMenuContent>
+                      <DropdownMenuItem>Copy</DropdownMenuItem>
+                      <DropdownMenuItem>Paste</DropdownMenuItem>
+                      <DropdownMenuSeparator />
+                      <DropdownMenuItem>Inspect</DropdownMenuItem>
+                    </DropdownMenuContent>
+                  </DropdownMenu>
+                </div>
               </div>
             </div>
           </div>
@@ -265,40 +294,29 @@ export default function DropdownMenuPage() {
                     value
                   </td>
                   <td className="border-border border px-4 py-2">
-                    A radio item in the group.
+                    A menu item with a radio button.
                   </td>
                 </tr>
                 <tr>
                   <td className="border-border border px-4 py-2 font-mono text-xs">
-                    DropdownMenuSub
-                  </td>
-                  <td className="border-border border px-4 py-2 font-mono text-xs">
-                    -
-                  </td>
-                  <td className="border-border border px-4 py-2">
-                    A submenu container.
-                  </td>
-                </tr>
-                <tr>
-                  <td className="border-border border px-4 py-2 font-mono text-xs">
-                    DropdownMenuSubTrigger
+                    DropdownMenuLabel
                   </td>
                   <td className="border-border border px-4 py-2 font-mono text-xs">
                     inset
                   </td>
                   <td className="border-border border px-4 py-2">
-                    Trigger for the submenu.
+                    A label for groups of menu items.
                   </td>
                 </tr>
                 <tr>
                   <td className="border-border border px-4 py-2 font-mono text-xs">
-                    DropdownMenuSubContent
+                    DropdownMenuSeparator
                   </td>
                   <td className="border-border border px-4 py-2 font-mono text-xs">
-                    className
+                    -
                   </td>
                   <td className="border-border border px-4 py-2">
-                    Content for the submenu.
+                    A visual separator between menu items.
                   </td>
                 </tr>
                 <tr>
@@ -306,10 +324,10 @@ export default function DropdownMenuPage() {
                     DropdownMenuShortcut
                   </td>
                   <td className="border-border border px-4 py-2 font-mono text-xs">
-                    className
+                    -
                   </td>
                   <td className="border-border border px-4 py-2">
-                    Displays a keyboard shortcut.
+                    A keyboard shortcut displayed next to a menu item.
                   </td>
                 </tr>
               </tbody>

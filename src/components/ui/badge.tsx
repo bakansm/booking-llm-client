@@ -11,18 +11,47 @@ const badgeVariants = cva(
   {
     variants: {
       variant: {
-        default:
-          "border-transparent bg-primary text-primary-foreground [a&]:hover:bg-primary/90",
-        secondary:
-          "border-transparent bg-secondary text-secondary-foreground [a&]:hover:bg-secondary/90",
-        destructive:
-          "border-transparent bg-destructive text-white [a&]:hover:bg-destructive/90 focus-visible:ring-destructive/20 dark:focus-visible:ring-destructive/40 dark:bg-destructive/60",
-        outline:
-          "text-foreground [a&]:hover:bg-accent [a&]:hover:text-accent-foreground",
+        contained: "",
+        outlined: "bg-transparent",
+      },
+      color: {
+        primary: "border-transparent bg-primary [a&]:hover:bg-primary/90",
+        secondary: "border-transparent bg-secondary [a&]:hover:bg-secondary/90",
+        warning: "border-transparent bg-warning [a&]:hover:bg-warning/90",
+        error: "border-transparent bg-error [a&]:hover:bg-error/90",
+        success: "border-transparent bg-success [a&]:hover:bg-success/90",
       },
     },
+    compoundVariants: [
+      {
+        variant: "outlined",
+        color: "primary",
+        class: "border-primary text-primary bg-transparent",
+      },
+      {
+        variant: "outlined",
+        color: "secondary",
+        class: "border-secondary text-secondary bg-transparent",
+      },
+      {
+        variant: "outlined",
+        color: "warning",
+        class: "border-warning text-warning bg-transparent",
+      },
+      {
+        variant: "outlined",
+        color: "error",
+        class: "border-error text-error bg-transparent",
+      },
+      {
+        variant: "outlined",
+        color: "success",
+        class: "border-success text-success bg-transparent",
+      },
+    ],
     defaultVariants: {
-      variant: "default",
+      variant: "contained",
+      color: "primary",
     },
   },
 );
@@ -30,6 +59,7 @@ const badgeVariants = cva(
 function Badge({
   className,
   variant,
+  color,
   asChild = false,
   ...props
 }: React.ComponentProps<"span"> &
@@ -39,7 +69,7 @@ function Badge({
   return (
     <Comp
       data-slot="badge"
-      className={cn(badgeVariants({ variant }), className)}
+      className={cn(badgeVariants({ variant, color }), className)}
       {...props}
     />
   );

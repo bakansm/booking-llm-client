@@ -25,7 +25,7 @@ export default function PopoverPage() {
           <div className="max-w-md">
             <Popover>
               <PopoverTrigger asChild>
-                <Button variant="outline">Open Popover</Button>
+                <Button variant="outlined">Open Popover</Button>
               </PopoverTrigger>
               <PopoverContent>
                 <div className="space-y-2">
@@ -48,7 +48,7 @@ export default function PopoverPage() {
               <div className="flex gap-4">
                 <Popover>
                   <PopoverTrigger asChild>
-                    <Button variant="outline">Start</Button>
+                    <Button variant="outlined">Start</Button>
                   </PopoverTrigger>
                   <PopoverContent align="start">
                     <p className="text-sm">
@@ -58,7 +58,7 @@ export default function PopoverPage() {
                 </Popover>
                 <Popover>
                   <PopoverTrigger asChild>
-                    <Button variant="outline">End</Button>
+                    <Button variant="outlined">End</Button>
                   </PopoverTrigger>
                   <PopoverContent align="end">
                     <p className="text-sm">
@@ -72,7 +72,7 @@ export default function PopoverPage() {
               <h3 className="mb-2 text-lg font-medium">Side Offset</h3>
               <Popover>
                 <PopoverTrigger asChild>
-                  <Button variant="outline">Offset</Button>
+                  <Button variant="outlined">Offset</Button>
                 </PopoverTrigger>
                 <PopoverContent sideOffset={10}>
                   <p className="text-sm">
@@ -91,7 +91,7 @@ export default function PopoverPage() {
               <h3 className="mb-2 text-lg font-medium">Custom Width</h3>
               <Popover>
                 <PopoverTrigger asChild>
-                  <Button variant="outline">Custom Width</Button>
+                  <Button variant="outlined">Custom Width</Button>
                 </PopoverTrigger>
                 <PopoverContent className="w-96">
                   <p className="text-sm">
@@ -104,7 +104,7 @@ export default function PopoverPage() {
               <h3 className="mb-2 text-lg font-medium">With Close Button</h3>
               <Popover>
                 <PopoverTrigger asChild>
-                  <Button variant="outline">With Close</Button>
+                  <Button variant="outlined">With Close</Button>
                 </PopoverTrigger>
                 <PopoverContent>
                   <div className="grid gap-4">
@@ -117,7 +117,7 @@ export default function PopoverPage() {
                     <div className="flex justify-end">
                       <PopoverClose asChild>
                         <Button
-                          variant="outline"
+                          variant="outlined"
                           size="sm">
                           Close
                         </Button>
@@ -138,7 +138,7 @@ export default function PopoverPage() {
               <div className="max-w-md">
                 <Popover>
                   <PopoverTrigger asChild>
-                    <Button variant="outline">Login</Button>
+                    <Button variant="outlined">Login</Button>
                   </PopoverTrigger>
                   <PopoverContent className="w-80">
                     <form className="grid gap-4">
@@ -175,7 +175,7 @@ export default function PopoverPage() {
                 <Popover>
                   <PopoverTrigger asChild>
                     <Button
-                      variant="outline"
+                      variant="outlined"
                       className="w-[180px] justify-start text-left font-normal">
                       <div className="bg-primary mr-2 h-4 w-4 rounded-full" />
                       <span>Pick a color</span>

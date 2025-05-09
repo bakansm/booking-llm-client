@@ -94,6 +94,76 @@ export function CalendarProps() {
           </tr>
           <tr>
             <td className="border-border border px-4 py-2 font-mono text-xs">
+              disabled
+            </td>
+            <td className="border-border border px-4 py-2 font-mono text-xs">
+              boolean | Date | Date[] | ((date: Date) =&gt; boolean)
+            </td>
+            <td className="border-border border px-4 py-2 font-mono text-xs">
+              false
+            </td>
+            <td className="border-border border px-4 py-2">
+              Disable specific dates or use a function for custom logic.
+            </td>
+          </tr>
+          <tr>
+            <td className="border-border border px-4 py-2 font-mono text-xs">
+              fromDate
+            </td>
+            <td className="border-border border px-4 py-2 font-mono text-xs">
+              Date
+            </td>
+            <td className="border-border border px-4 py-2 font-mono text-xs">
+              -
+            </td>
+            <td className="border-border border px-4 py-2">
+              The minimum date that can be selected.
+            </td>
+          </tr>
+          <tr>
+            <td className="border-border border px-4 py-2 font-mono text-xs">
+              toDate
+            </td>
+            <td className="border-border border px-4 py-2 font-mono text-xs">
+              Date
+            </td>
+            <td className="border-border border px-4 py-2 font-mono text-xs">
+              -
+            </td>
+            <td className="border-border border px-4 py-2">
+              The maximum date that can be selected.
+            </td>
+          </tr>
+          <tr>
+            <td className="border-border border px-4 py-2 font-mono text-xs">
+              modifiers
+            </td>
+            <td className="border-border border px-4 py-2 font-mono text-xs">
+              Record&lt;string, Date | Date[] | ((date: Date) =&gt; boolean)&gt;
+            </td>
+            <td className="border-border border px-4 py-2 font-mono text-xs">
+              -
+            </td>
+            <td className="border-border border px-4 py-2">
+              Custom modifiers to apply to specific dates.
+            </td>
+          </tr>
+          <tr>
+            <td className="border-border border px-4 py-2 font-mono text-xs">
+              modifiersClassNames
+            </td>
+            <td className="border-border border px-4 py-2 font-mono text-xs">
+              Record&lt;string, string&gt;
+            </td>
+            <td className="border-border border px-4 py-2 font-mono text-xs">
+              -
+            </td>
+            <td className="border-border border px-4 py-2">
+              Custom classes to apply to modifiers.
+            </td>
+          </tr>
+          <tr>
+            <td className="border-border border px-4 py-2 font-mono text-xs">
               className
             </td>
             <td className="border-border border px-4 py-2 font-mono text-xs">

@@ -13,7 +13,7 @@ export function DatePickerExample() {
     <div className="flex items-center gap-2">
       <Button
         onClick={() => setOpen((o) => !o)}
-        variant="outline">
+        variant="outlined">
         {date ? date.toLocaleDateString() : "Pick a date"}
       </Button>
       {open && (

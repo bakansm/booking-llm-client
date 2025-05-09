@@ -1,10 +1,13 @@
+import { AppointmentPickerDemo } from "@/components/playground/calendar/appointment-picker-demo";
 import { BasicCalendarDemo } from "@/components/playground/calendar/basic-calendar-demo";
 import { BookingRangeExample } from "@/components/playground/calendar/booking-range-example";
 import { CalendarProps } from "@/components/playground/calendar/calendar-props";
 import { CustomStartWeekDemo } from "@/components/playground/calendar/custom-start-week-demo";
 import { CustomStylingDemo } from "@/components/playground/calendar/custom-styling-demo";
+import { DateComparisonDemo } from "@/components/playground/calendar/date-comparison-demo";
 import { DatePickerExample } from "@/components/playground/calendar/date-picker-example";
 import { DateRangeDemo } from "@/components/playground/calendar/date-range-demo";
+import { DisabledDatesDemo } from "@/components/playground/calendar/disabled-dates-demo";
 import { HideOutsideDaysDemo } from "@/components/playground/calendar/hide-outside-days-demo";
 import { MultipleDatesDemo } from "@/components/playground/calendar/multiple-dates-demo";
 import { SingleDateDemo } from "@/components/playground/calendar/single-date-demo";
@@ -53,17 +56,37 @@ export default function CalendarPage() {
           </div>
         </section>
 
-        {/* Examples Section */}
+        {/* Advanced Examples Section */}
         <section>
-          <h2 className="mb-4 text-xl font-semibold">Examples</h2>
-          <div className="grid gap-8">
-            <div className="flex flex-col gap-4">
-              <h3 className="text-lg font-medium">Date Picker with Popover</h3>
-              <DatePickerExample />
+          <h2 className="mb-4 text-xl font-semibold">Advanced Examples</h2>
+          <div className="grid gap-12">
+            <div className="grid grid-cols-1 gap-8 xl:grid-cols-2">
+              <div className="flex flex-col gap-4">
+                <h3 className="text-lg font-medium">
+                  Date Picker with Popover
+                </h3>
+                <DatePickerExample />
+              </div>
+              <div className="flex flex-col gap-4">
+                <h3 className="text-lg font-medium">Booking Date Range</h3>
+                <BookingRangeExample />
+              </div>
             </div>
-            <div className="flex flex-col gap-4">
-              <h3 className="text-lg font-medium">Booking Date Range</h3>
-              <BookingRangeExample />
+
+            <div className="grid grid-cols-1 gap-8 xl:grid-cols-2">
+              <div className="flex flex-col gap-4">
+                <h3 className="text-lg font-medium">Disabled Dates</h3>
+                <DisabledDatesDemo />
+              </div>
+              <div className="flex flex-col gap-4">
+                <h3 className="text-lg font-medium">Appointment Picker</h3>
+                <AppointmentPickerDemo />
+              </div>
+            </div>
+
+            <div className="flex max-w-3xl flex-col gap-4">
+              <h3 className="text-lg font-medium">Date Comparison</h3>
+              <DateComparisonDemo />
             </div>
           </div>
         </section>

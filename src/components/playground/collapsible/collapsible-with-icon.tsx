@@ -11,7 +11,7 @@ export function CollapsibleWithIcon() {
   return (
     <Collapsible>
       <CollapsibleTrigger asChild>
-        <Button variant="outline">
+        <Button variant="outlined">
           <span className="mr-2">▼</span> Toggle
         </Button>
       </CollapsibleTrigger>

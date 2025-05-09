@@ -27,7 +27,7 @@ export default function DialogPage() {
           <div className="max-w-md">
             <Dialog>
               <DialogTrigger asChild>
-                <Button variant="outline">Open Dialog</Button>
+                <Button variant="outlined">Open Dialog</Button>
               </DialogTrigger>
               <DialogContent>
                 <DialogHeader>
@@ -39,7 +39,11 @@ export default function DialogPage() {
                 <div className="py-4">Dialog body content goes here.</div>
                 <DialogFooter>
                   <DialogClose asChild>
-                    <Button variant="secondary">Close</Button>
+                    <Button
+                      variant="contained"
+                      color={"secondary"}>
+                      Close
+                    </Button>
                   </DialogClose>
                 </DialogFooter>
               </DialogContent>
@@ -56,7 +60,7 @@ export default function DialogPage() {
               <h3 className="mb-2 text-lg font-medium">Centered</h3>
               <Dialog>
                 <DialogTrigger asChild>
-                  <Button variant="outline">Open Centered</Button>
+                  <Button variant="outlined">Open Centered</Button>
                 </DialogTrigger>
                 <DialogContent className="sm:max-w-xs">
                   <DialogHeader>
@@ -67,7 +71,11 @@ export default function DialogPage() {
                   </div>
                   <DialogFooter>
                     <DialogClose asChild>
-                      <Button variant="secondary">Close</Button>
+                      <Button
+                        variant="contained"
+                        color={"secondary"}>
+                        Close
+                      </Button>
                     </DialogClose>
                   </DialogFooter>
                 </DialogContent>
@@ -78,7 +86,7 @@ export default function DialogPage() {
               <h3 className="mb-2 text-lg font-medium">With Form</h3>
               <Dialog>
                 <DialogTrigger asChild>
-                  <Button variant="outline">Open Form</Button>
+                  <Button variant="outlined">Open Form</Button>
                 </DialogTrigger>
                 <DialogContent>
                   <DialogHeader>
@@ -107,7 +115,7 @@ export default function DialogPage() {
               <h3 className="mb-2 text-lg font-medium">Custom Close</h3>
               <Dialog>
                 <DialogTrigger asChild>
-                  <Button variant="outline">Open Custom Close</Button>
+                  <Button variant="outlined">Open Custom Close</Button>
                 </DialogTrigger>
                 <DialogContent>
                   <DialogHeader>
@@ -118,7 +126,11 @@ export default function DialogPage() {
                   </div>
                   <DialogFooter>
                     <DialogClose asChild>
-                      <Button variant="destructive">Dismiss</Button>
+                      <Button
+                        variant="contained"
+                        color={"secondary"}>
+                        Dismiss
+                      </Button>
                     </DialogClose>
                   </DialogFooter>
                 </DialogContent>
@@ -149,7 +161,11 @@ export default function DialogPage() {
                   </div>
                   <DialogFooter>
                     <DialogClose asChild>
-                      <Button variant="secondary">Close</Button>
+                      <Button
+                        variant="contained"
+                        color={"secondary"}>
+                        Close
+                      </Button>
                     </DialogClose>
                   </DialogFooter>
                 </DialogContent>
@@ -160,7 +176,7 @@ export default function DialogPage() {
               <h3 className="mb-2 text-lg font-medium">With Icon</h3>
               <Dialog>
                 <DialogTrigger asChild>
-                  <Button variant="outline">Open With Icon</Button>
+                  <Button variant="outlined">Open With Icon</Button>
                 </DialogTrigger>
                 <DialogContent>
                   <DialogHeader>
@@ -179,7 +195,11 @@ export default function DialogPage() {
                   </div>
                   <DialogFooter>
                     <DialogClose asChild>
-                      <Button variant="secondary">Close</Button>
+                      <Button
+                        variant="contained"
+                        color={"secondary"}>
+                        Close
+                      </Button>
                     </DialogClose>
                   </DialogFooter>
                 </DialogContent>
@@ -197,7 +217,7 @@ export default function DialogPage() {
               <div className="max-w-md">
                 <Dialog>
                   <DialogTrigger asChild>
-                    <Button variant="outline">Edit Profile</Button>
+                    <Button variant="outlined">Edit Profile</Button>
                   </DialogTrigger>
                   <DialogContent>
                     <DialogHeader>
@@ -232,7 +252,7 @@ export default function DialogPage() {
               <div className="max-w-md">
                 <Dialog>
                   <DialogTrigger asChild>
-                    <Button variant="outline">Open Long Content</Button>
+                    <Button variant="outlined">Open Long Content</Button>
                   </DialogTrigger>
                   <DialogContent>
                     <DialogHeader>
@@ -255,7 +275,11 @@ export default function DialogPage() {
                     </div>
                     <DialogFooter>
                       <DialogClose asChild>
-                        <Button variant="secondary">Close</Button>
+                        <Button
+                          variant="contained"
+                          color={"secondary"}>
+                          Close
+                        </Button>
                       </DialogClose>
                     </DialogFooter>
                   </DialogContent>

@@ -16,7 +16,7 @@ export function EditorOptionsDropdown() {
   return (
     <DropdownMenu>
       <DropdownMenuTrigger asChild>
-        <Button variant="outline">Editor Options</Button>
+        <Button variant="outlined">Editor Options</Button>
       </DropdownMenuTrigger>
       <DropdownMenuContent>
         <DropdownMenuCheckboxItem

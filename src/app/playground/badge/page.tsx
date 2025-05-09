@@ -15,10 +15,63 @@ export default function BadgePage() {
         <section>
           <h2 className="mb-4 text-xl font-semibold">Variants</h2>
           <div className="flex flex-wrap items-center gap-4">
-            <Badge variant="default">Default</Badge>
-            <Badge variant="secondary">Secondary</Badge>
-            <Badge variant="outline">Outline</Badge>
-            <Badge variant="destructive">Destructive</Badge>
+            <Badge
+              variant="contained"
+              color="primary">
+              Contained Primary
+            </Badge>
+            <Badge
+              variant="contained"
+              color="secondary">
+              Secondary
+            </Badge>
+            <Badge
+              variant="contained"
+              color="warning">
+              Warning
+            </Badge>
+            <Badge
+              variant="contained"
+              color="error">
+              Error
+            </Badge>
+            <Badge
+              variant="contained"
+              color="success">
+              Success
+            </Badge>
+          </div>
+        </section>
+
+        {/* Outlined Variants Section */}
+        <section>
+          <h2 className="mb-4 text-xl font-semibold">Outlined Variants</h2>
+          <div className="flex flex-wrap items-center gap-4">
+            <Badge
+              variant="outlined"
+              color="primary">
+              Outlined Primary
+            </Badge>
+            <Badge
+              variant="outlined"
+              color="secondary">
+              Secondary
+            </Badge>
+            <Badge
+              variant="outlined"
+              color="warning">
+              Warning
+            </Badge>
+            <Badge
+              variant="outlined"
+              color="error">
+              Error
+            </Badge>
+            <Badge
+              variant="outlined"
+              color="success">
+              Success
+            </Badge>
           </div>
         </section>
 
@@ -27,7 +80,8 @@ export default function BadgePage() {
           <h2 className="mb-4 text-xl font-semibold">With Icons</h2>
           <div className="flex flex-wrap items-center gap-4">
             <Badge
-              variant="default"
+              variant="contained"
+              color="primary"
               className="gap-1">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -51,7 +105,8 @@ export default function BadgePage() {
             </Badge>
 
             <Badge
-              variant="secondary"
+              variant="contained"
+              color="secondary"
               className="gap-1">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -70,7 +125,8 @@ export default function BadgePage() {
             </Badge>
 
             <Badge
-              variant="outline"
+              variant="outlined"
+              color="primary"
               className="gap-1">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -92,7 +148,8 @@ export default function BadgePage() {
             </Badge>
 
             <Badge
-              variant="destructive"
+              variant="outlined"
+              color="error"
               className="gap-1">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -122,21 +179,28 @@ export default function BadgePage() {
           <h2 className="mb-4 text-xl font-semibold">Sizes</h2>
           <div className="flex flex-wrap items-center gap-4">
             <Badge
-              variant="default"
+              variant="contained"
+              color="primary"
               className="text-xs">
               Extra Small
             </Badge>
 
-            <Badge variant="default">Default</Badge>
+            <Badge
+              variant="contained"
+              color="primary">
+              Default
+            </Badge>
 
             <Badge
-              variant="default"
+              variant="contained"
+              color="primary"
               className="px-3 py-1 text-base">
               Medium
             </Badge>
 
             <Badge
-              variant="default"
+              variant="contained"
+              color="primary"
               className="px-4 py-2 text-lg">
               Large
             </Badge>
@@ -161,7 +225,8 @@ export default function BadgePage() {
 
             {/* Custom Border */}
             <Badge
-              variant="outline"
+              variant="outlined"
+              color="primary"
               className="border-primary border-2">
               Thick Border
             </Badge>
@@ -177,22 +242,26 @@ export default function BadgePage() {
               <h3 className="text-lg font-medium">Status Indicators</h3>
               <div className="flex flex-wrap gap-2">
                 <Badge
-                  variant="outline"
+                  variant="outlined"
+                  color="success"
                   className="border-green-500 text-green-500">
                   Active
                 </Badge>
                 <Badge
-                  variant="outline"
+                  variant="outlined"
+                  color="warning"
                   className="border-yellow-500 text-yellow-500">
                   Pending
                 </Badge>
                 <Badge
-                  variant="outline"
+                  variant="outlined"
+                  color="error"
                   className="border-red-500 text-red-500">
                   Failed
                 </Badge>
                 <Badge
-                  variant="outline"
+                  variant="outlined"
+                  color="secondary"
                   className="border-gray-500 text-gray-500">
                   Inactive
                 </Badge>
@@ -202,12 +271,36 @@ export default function BadgePage() {
             <div className="flex flex-col gap-4">
               <h3 className="text-lg font-medium">Category Tags</h3>
               <div className="flex flex-wrap gap-2">
-                <Badge variant="secondary">Technology</Badge>
-                <Badge variant="secondary">Science</Badge>
-                <Badge variant="secondary">Design</Badge>
-                <Badge variant="secondary">Business</Badge>
-                <Badge variant="secondary">Health</Badge>
-                <Badge variant="secondary">Education</Badge>
+                <Badge
+                  variant="contained"
+                  color="primary">
+                  Technology
+                </Badge>
+                <Badge
+                  variant="contained"
+                  color="primary">
+                  Science
+                </Badge>
+                <Badge
+                  variant="contained"
+                  color="primary">
+                  Design
+                </Badge>
+                <Badge
+                  variant="contained"
+                  color="primary">
+                  Business
+                </Badge>
+                <Badge
+                  variant="contained"
+                  color="primary">
+                  Health
+                </Badge>
+                <Badge
+                  variant="contained"
+                  color="primary">
+                  Education
+                </Badge>
               </div>
             </div>
 
@@ -231,7 +324,11 @@ export default function BadgePage() {
                     </div>
                     <span>Meeting scheduled for tomorrow</span>
                   </div>
-                  <Badge variant="destructive">Urgent</Badge>
+                  <Badge
+                    variant="outlined"
+                    color="error">
+                    Urgent
+                  </Badge>
                 </div>
 
                 <div className="flex items-center justify-between rounded-lg border p-3">
@@ -241,7 +338,11 @@ export default function BadgePage() {
                     </div>
                     <span>Weekly report is available</span>
                   </div>
-                  <Badge variant="outline">Info</Badge>
+                  <Badge
+                    variant="outlined"
+                    color="primary">
+                    Info
+                  </Badge>
                 </div>
               </div>
             </div>
@@ -275,14 +376,29 @@ export default function BadgePage() {
                     variant
                   </td>
                   <td className="border-border border px-4 py-2 font-mono text-xs">
-                    &quot;default&quot; | &quot;secondary&quot; |
-                    &quot;outline&quot; | &quot;destructive&quot;
+                    &quot;contained&quot; | &quot;outlined&quot;
                   </td>
                   <td className="border-border border px-4 py-2 font-mono text-xs">
-                    &quot;default&quot;
+                    &quot;contained&quot;
                   </td>
                   <td className="border-border border px-4 py-2 font-mono text-xs">
                     The visual style of the badge.
+                  </td>
+                </tr>
+                <tr>
+                  <td className="border-border border px-4 py-2 font-mono text-xs">
+                    color
+                  </td>
+                  <td className="border-border border px-4 py-2 font-mono text-xs">
+                    &quot;primary&quot; | &quot;secondary&quot; |
+                    &quot;warning&quot; | &quot;error&quot; |
+                    &quot;success&quot;
+                  </td>
+                  <td className="border-border border px-4 py-2 font-mono text-xs">
+                    &quot;primary&quot;
+                  </td>
+                  <td className="border-border border px-4 py-2 font-mono text-xs">
+                    The color of the badge.
                   </td>
                 </tr>
                 <tr>
@@ -297,6 +413,20 @@ export default function BadgePage() {
                   </td>
                   <td className="border-border border px-4 py-2">
                     Additional CSS classes to customize the badge.
+                  </td>
+                </tr>
+                <tr>
+                  <td className="border-border border px-4 py-2 font-mono text-xs">
+                    asChild
+                  </td>
+                  <td className="border-border border px-4 py-2 font-mono text-xs">
+                    boolean
+                  </td>
+                  <td className="border-border border px-4 py-2 font-mono text-xs">
+                    false
+                  </td>
+                  <td className="border-border border px-4 py-2">
+                    Whether to render badge as its children.
                   </td>
                 </tr>
               </tbody>

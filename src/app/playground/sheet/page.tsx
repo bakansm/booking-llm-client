@@ -28,7 +28,7 @@ export default function SheetPage() {
           <div className="max-w-md">
             <Sheet>
               <SheetTrigger asChild>
-                <Button variant="outline">Open Sheet</Button>
+                <Button variant="outlined">Open Sheet</Button>
               </SheetTrigger>
               <SheetContent>
                 <SheetHeader>
@@ -55,7 +55,7 @@ export default function SheetPage() {
               <h3 className="mb-2 text-lg font-medium">Left Side</h3>
               <Sheet>
                 <SheetTrigger asChild>
-                  <Button variant="outline">Open Left</Button>
+                  <Button variant="outlined">Open Left</Button>
                 </SheetTrigger>
                 <SheetContent side="left">
                   <SheetHeader>
@@ -71,7 +71,7 @@ export default function SheetPage() {
               <h3 className="mb-2 text-lg font-medium">Right Side</h3>
               <Sheet>
                 <SheetTrigger asChild>
-                  <Button variant="outline">Open Right</Button>
+                  <Button variant="outlined">Open Right</Button>
                 </SheetTrigger>
                 <SheetContent side="right">
                   <SheetHeader>
@@ -87,7 +87,7 @@ export default function SheetPage() {
               <h3 className="mb-2 text-lg font-medium">Top Side</h3>
               <Sheet>
                 <SheetTrigger asChild>
-                  <Button variant="outline">Open Top</Button>
+                  <Button variant="outlined">Open Top</Button>
                 </SheetTrigger>
                 <SheetContent side="top">
                   <SheetHeader>
@@ -103,7 +103,7 @@ export default function SheetPage() {
               <h3 className="mb-2 text-lg font-medium">Bottom Side</h3>
               <Sheet>
                 <SheetTrigger asChild>
-                  <Button variant="outline">Open Bottom</Button>
+                  <Button variant="outlined">Open Bottom</Button>
                 </SheetTrigger>
                 <SheetContent side="bottom">
                   <SheetHeader>
@@ -125,7 +125,7 @@ export default function SheetPage() {
               <h3 className="mb-2 text-lg font-medium">With Footer</h3>
               <Sheet>
                 <SheetTrigger asChild>
-                  <Button variant="outline">With Footer</Button>
+                  <Button variant="outlined">With Footer</Button>
                 </SheetTrigger>
                 <SheetContent>
                   <SheetHeader>
@@ -150,7 +150,7 @@ export default function SheetPage() {
               <h3 className="mb-2 text-lg font-medium">Custom Styling</h3>
               <Sheet>
                 <SheetTrigger asChild>
-                  <Button variant="outline">Custom Styling</Button>
+                  <Button variant="outlined">Custom Styling</Button>
                 </SheetTrigger>
                 <SheetContent className="bg-muted/30 border-l-primary">
                   <SheetHeader className="border-b pb-4">
@@ -181,7 +181,7 @@ export default function SheetPage() {
               <div className="max-w-md">
                 <Sheet>
                   <SheetTrigger asChild>
-                    <Button variant="outline">Open Menu</Button>
+                    <Button variant="outlined">Open Menu</Button>
                   </SheetTrigger>
                   <SheetContent side="left">
                     <SheetHeader>
@@ -223,7 +223,7 @@ export default function SheetPage() {
               <div className="max-w-md">
                 <Sheet>
                   <SheetTrigger asChild>
-                    <Button variant="outline">Edit Profile</Button>
+                    <Button variant="outlined">Edit Profile</Button>
                   </SheetTrigger>
                   <SheetContent>
                     <SheetHeader>

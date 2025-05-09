@@ -16,46 +16,40 @@ function Calendar({
   return (
     <DayPicker
       showOutsideDays={showOutsideDays}
-      className={cn("p-3", className)}
+      className={cn(
+        "bg-sub-background overflow-hidden rounded-xs p-3 shadow-md",
+        className,
+      )}
       classNames={{
-        months: "flex flex-col sm:flex-row gap-2",
+        months: "",
         month: "flex flex-col gap-4",
-        caption: "flex justify-center pt-1 relative items-center w-full",
-        caption_label: "text-sm font-medium",
-        nav: "flex items-center gap-1",
-        nav_button: cn(
-          buttonVariants({ variant: "outline" }),
-          "size-7 bg-transparent p-0 opacity-50 hover:opacity-100",
-        ),
-        nav_button_previous: "absolute left-1",
-        nav_button_next: "absolute right-1",
-        table: "w-full border-collapse space-x-1",
+        caption: "relative text-center",
+        caption_label:
+          "text-strong-mobile md:text-strong-tablet lg:text-strong",
+        nav: "flex items-center",
+        nav_button: "cursor-pointer p-1 hover:bg-primary/20 rounded-full",
+        nav_button_previous: "absolute left-0 top-0",
+        nav_button_next: "absolute right-0 top-0",
+        table: "",
         head_row: "flex",
         head_cell:
-          "text-muted-foreground rounded-md w-8 font-normal text-[0.8rem]",
-        row: "flex w-full mt-2",
-        cell: cn(
-          "relative p-0 text-center text-sm focus-within:relative focus-within:z-20 [&:has([aria-selected])]:bg-accent [&:has([aria-selected].day-range-end)]:rounded-r-md",
-          props.mode === "range"
-            ? "[&:has(>.day-range-end)]:rounded-r-md [&:has(>.day-range-start)]:rounded-l-md first:[&:has([aria-selected])]:rounded-l-md last:[&:has([aria-selected])]:rounded-r-md"
-            : "[&:has([aria-selected])]:rounded-md",
-        ),
+          "text-primary w-full text-p-mobile md:text-p-tablet xl:text-p",
+        row: "flex w-full",
+        cell: "relative aspect-square p-0 text-center text-small-mobile md:text-small-tablet xl:text-small focus-within:relative focus-within:z-20",
         day: cn(
-          buttonVariants({ variant: "ghost" }),
-          "size-8 p-0 font-normal aria-selected:opacity-100",
+          buttonVariants({ variant: "text", icon: true }),
+          "aria-selected:bg-primary aria-selected:text-foreground rounded-full text-foreground",
         ),
         day_range_start:
-          "day-range-start aria-selected:bg-primary aria-selected:text-primary-foreground",
+          "aria-selected:rounded-e-none aria-selected:bg-primary aria-selected:text-foreground",
         day_range_end:
-          "day-range-end aria-selected:bg-primary aria-selected:text-primary-foreground",
-        day_selected:
-          "bg-primary text-primary-foreground hover:bg-primary hover:text-primary-foreground focus:bg-primary focus:text-primary-foreground",
-        day_today: "bg-accent text-accent-foreground",
-        day_outside:
-          "day-outside text-muted-foreground aria-selected:text-muted-foreground",
-        day_disabled: "text-muted-foreground opacity-50",
+          "aria-selected:rounded-s-none aria-selected:bg-primary aria-selected:text-foreground",
+        day_selected: "aria-selected:bg-primary aria-selected:text-foreground",
+        day_today: "bg-primary text-foreground",
+        day_outside: "text-foreground/30 aria-selected:text-foreground",
+        day_disabled: "text-foreground opacity-50",
         day_range_middle:
-          "aria-selected:bg-accent aria-selected:text-accent-foreground",
+          "aria-selected:bg-primary/10 rounded-none aria-selected:text-foreground",
         day_hidden: "invisible",
         ...classNames,
       }}

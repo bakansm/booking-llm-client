@@ -11,7 +11,7 @@ export function FaqCollapsible() {
   return (
     <Collapsible>
       <CollapsibleTrigger asChild>
-        <Button variant="outline">What is your return policy?</Button>
+        <Button variant="outlined">What is your return policy?</Button>
       </CollapsibleTrigger>
       <CollapsibleContent>
         <div className="bg-muted mt-4 rounded-md border p-4">

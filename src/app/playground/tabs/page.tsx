@@ -26,18 +26,14 @@ export default function TabsPage() {
               <TabsTrigger value="password">Password</TabsTrigger>
               <TabsTrigger value="settings">Settings</TabsTrigger>
             </TabsList>
-            <TabsContent
-              value="account"
-              className="mt-2 rounded-md border p-4">
+            <TabsContent value="account">
               <h3 className="text-lg font-medium">Account</h3>
               <p className="text-muted-foreground text-sm">
                 Make changes to your account here. Click save when you&apos;re
                 done.
               </p>
             </TabsContent>
-            <TabsContent
-              value="password"
-              className="mt-2 rounded-md border p-4">
+            <TabsContent value="password">
               <h3 className="text-lg font-medium">Password</h3>
               <p className="text-muted-foreground text-sm">
                 Change your password here. After saving, you&apos;ll be logged
@@ -118,27 +114,27 @@ export default function TabsPage() {
                 </TabsContent>
                 <TabsContent
                   value="notifications"
-                  className="mt-2 space-y-4 rounded-md border p-4">
+                  className="mt-2 space-y-4 rounded-md p-4">
                   <div className="space-y-2">
                     <h3 className="text-lg font-medium">Email Notifications</h3>
                     <div className="flex flex-col gap-2">
-                      <div className="flex items-center justify-between rounded-lg border p-3">
+                      <div className="flex items-center justify-between rounded-lg p-3">
                         <div className="space-y-0.5">
                           <p className="font-medium">Marketing emails</p>
                           <p className="text-muted-foreground text-sm">
                             Receive emails about new products and features.
                           </p>
                         </div>
-                        <Button variant="outline">Enabled</Button>
+                        <Button variant="outlined">Enabled</Button>
                       </div>
-                      <div className="flex items-center justify-between rounded-lg border p-3">
+                      <div className="flex items-center justify-between rounded-lg p-3">
                         <div className="space-y-0.5">
                           <p className="font-medium">Security emails</p>
                           <p className="text-muted-foreground text-sm">
                             Receive emails about your account security.
                           </p>
                         </div>
-                        <Button variant="outline">Enabled</Button>
+                        <Button variant="outlined">Enabled</Button>
                       </div>
                     </div>
                   </div>
@@ -149,7 +145,7 @@ export default function TabsPage() {
 
             <div className="flex flex-col gap-4">
               <h3 className="text-lg font-medium">Vertical Tabs</h3>
-              <div className="flex max-w-3xl flex-col gap-4 rounded-md border p-4 md:flex-row">
+              <div className="flex max-w-3xl flex-col gap-4 rounded-md p-4 md:flex-row">
                 <Tabs
                   defaultValue="tab1"
                   className="w-full"

@@ -17,7 +17,7 @@ export function ThemeDropdown() {
   return (
     <DropdownMenu>
       <DropdownMenuTrigger asChild>
-        <Button variant="outline">Theme</Button>
+        <Button variant="outlined">Theme</Button>
       </DropdownMenuTrigger>
       <DropdownMenuContent>
         <DropdownMenuLabel>Theme</DropdownMenuLabel>

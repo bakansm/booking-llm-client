@@ -11,7 +11,7 @@ export function SidebarCollapsible() {
   return (
     <Collapsible>
       <CollapsibleTrigger asChild>
-        <Button variant="ghost">Toggle Sidebar Section</Button>
+        <Button variant="text">Toggle Sidebar Section</Button>
       </CollapsibleTrigger>
       <CollapsibleContent>
         <div className="bg-muted mt-2 rounded p-2 text-sm">

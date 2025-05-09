@@ -11,7 +11,7 @@ export function BasicCollapsibleDemo() {
   return (
     <Collapsible>
       <CollapsibleTrigger asChild>
-        <Button variant="outline">Toggle Content</Button>
+        <Button variant="outlined">Toggle Content</Button>
       </CollapsibleTrigger>
       <CollapsibleContent>
         <div className="bg-muted mt-4 rounded-md border p-4">

@@ -11,5 +11,10 @@ export function AnimatedProgress() {
     return () => clearTimeout(timer);
   }, []);
 
-  return <Progress value={progress} />;
+  return (
+    <Progress
+      value={progress}
+      color="secondary"
+    />
+  );
 }

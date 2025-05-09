@@ -37,6 +37,7 @@ const components = [
   { name: "Tabs", href: "/playground/tabs" },
   { name: "Textarea", href: "/playground/textarea" },
   { name: "Tooltip", href: "/playground/tooltip" },
+  { name: "Typography", href: "/playground/typography" },
 ];
 
 // Sort components alphabetically

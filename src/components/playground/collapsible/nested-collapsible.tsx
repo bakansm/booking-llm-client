@@ -11,7 +11,7 @@ export function NestedCollapsible() {
   return (
     <Collapsible>
       <CollapsibleTrigger asChild>
-        <Button variant="outline">Toggle Outer</Button>
+        <Button variant="outlined">Toggle Outer</Button>
       </CollapsibleTrigger>
       <CollapsibleContent>
         <div className="bg-muted mt-4 rounded-md border p-4">
@@ -20,7 +20,8 @@ export function NestedCollapsible() {
             <CollapsibleTrigger asChild>
               <Button
                 size="sm"
-                variant="secondary">
+                variant="contained"
+                color="secondary">
                 Toggle Inner
               </Button>
             </CollapsibleTrigger>

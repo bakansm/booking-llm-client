@@ -30,17 +30,38 @@ export default function AlertPage() {
         <section>
           <h2 className="mb-4 text-xl font-semibold">Variants</h2>
           <div className="grid max-w-xl gap-4">
-            <Alert variant="default">
-              <AlertTitle>Default Alert</AlertTitle>
+            <Alert variant="warning">
+              <AlertTitle>Warning Alert</AlertTitle>
               <AlertDescription>
-                This is a default alert — check it out!
+                This is a warning alert — check it out!
               </AlertDescription>
             </Alert>
 
-            <Alert variant="destructive">
-              <AlertTitle>Destructive Alert</AlertTitle>
+            <Alert variant="error">
+              <AlertTitle>Error Alert</AlertTitle>
               <AlertDescription>
-                This is a destructive alert for errors or critical warnings.
+                This is an error alert for critical warnings.
+              </AlertDescription>
+            </Alert>
+
+            <Alert variant="success">
+              <AlertTitle>Success Alert</AlertTitle>
+              <AlertDescription>
+                This is a success alert for confirmations.
+              </AlertDescription>
+            </Alert>
+
+            <Alert variant="secondary">
+              <AlertTitle>Secondary Alert</AlertTitle>
+              <AlertDescription>
+                This is a secondary alert for less critical information.
+              </AlertDescription>
+            </Alert>
+
+            <Alert variant="primary">
+              <AlertTitle>Primary Alert</AlertTitle>
+              <AlertDescription>
+                This is a primary alert for important information.
               </AlertDescription>
             </Alert>
           </div>
@@ -50,7 +71,7 @@ export default function AlertPage() {
         <section>
           <h2 className="mb-4 text-xl font-semibold">With Icons</h2>
           <div className="grid max-w-xl gap-4">
-            <Alert>
+            <Alert variant="primary">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 width="24"
@@ -60,8 +81,7 @@ export default function AlertPage() {
                 stroke="currentColor"
                 strokeWidth="2"
                 strokeLinecap="round"
-                strokeLinejoin="round"
-                className="text-primary">
+                strokeLinejoin="round">
                 <path d="M12 16v-4" />
                 <path d="M12 8h.01" />
                 <circle
@@ -76,7 +96,7 @@ export default function AlertPage() {
               </AlertDescription>
             </Alert>
 
-            <Alert variant="destructive">
+            <Alert variant="warning">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 width="24"
@@ -107,7 +127,7 @@ export default function AlertPage() {
               </AlertDescription>
             </Alert>
 
-            <Alert>
+            <Alert variant="success">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 width="24"
@@ -117,14 +137,48 @@ export default function AlertPage() {
                 stroke="currentColor"
                 strokeWidth="2"
                 strokeLinecap="round"
-                strokeLinejoin="round"
-                className="text-green-500">
+                strokeLinejoin="round">
                 <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14" />
                 <polyline points="22 4 12 14.01 9 11.01" />
               </svg>
               <AlertTitle>Success</AlertTitle>
               <AlertDescription>
                 Your changes have been saved successfully.
+              </AlertDescription>
+            </Alert>
+
+            <Alert variant="error">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                strokeWidth="2"
+                strokeLinecap="round"
+                strokeLinejoin="round">
+                <circle
+                  cx="12"
+                  cy="12"
+                  r="10"
+                />
+                <line
+                  x1="15"
+                  y1="9"
+                  x2="9"
+                  y2="15"
+                />
+                <line
+                  x1="9"
+                  y1="9"
+                  x2="15"
+                  y2="15"
+                />
+              </svg>
+              <AlertTitle>Error</AlertTitle>
+              <AlertDescription>
+                Something went wrong. Please try again later.
               </AlertDescription>
             </Alert>
           </div>
@@ -234,7 +288,7 @@ export default function AlertPage() {
                   />
                 </div>
                 <Alert
-                  variant="destructive"
+                  variant="error"
                   className="mb-4">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
@@ -278,7 +332,7 @@ export default function AlertPage() {
             <div className="flex flex-col gap-4">
               <h3 className="text-lg font-medium">System Notification</h3>
               <div className="max-w-xl rounded-lg border p-6">
-                <Alert className="border-yellow-200 bg-yellow-50 text-yellow-800">
+                <Alert variant="warning">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     width="24"
@@ -288,8 +342,7 @@ export default function AlertPage() {
                     stroke="currentColor"
                     strokeWidth="2"
                     strokeLinecap="round"
-                    strokeLinejoin="round"
-                    className="text-yellow-600">
+                    strokeLinejoin="round">
                     <path d="M10.29 3.86 1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z" />
                     <line
                       x1="12"
@@ -305,7 +358,7 @@ export default function AlertPage() {
                     />
                   </svg>
                   <AlertTitle>System Maintenance</AlertTitle>
-                  <AlertDescription className="text-yellow-700">
+                  <AlertDescription>
                     The system will be down for scheduled maintenance on Sunday,
                     July 15th from 2:00 AM to 4:00 AM UTC.
                   </AlertDescription>
@@ -316,7 +369,7 @@ export default function AlertPage() {
             <div className="flex flex-col gap-4">
               <h3 className="text-lg font-medium">Feature Announcement</h3>
               <div className="max-w-xl rounded-lg border p-6">
-                <Alert className="border-blue-200 bg-blue-50 text-blue-800">
+                <Alert variant="primary">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     width="24"
@@ -326,12 +379,11 @@ export default function AlertPage() {
                     stroke="currentColor"
                     strokeWidth="2"
                     strokeLinecap="round"
-                    strokeLinejoin="round"
-                    className="text-blue-500">
+                    strokeLinejoin="round">
                     <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2" />
                   </svg>
                   <AlertTitle>New Feature Available</AlertTitle>
-                  <AlertDescription className="text-blue-700">
+                  <AlertDescription>
                     We&apos;ve just released our new reporting dashboard! Check
                     it out in your account settings.
                     <div className="mt-2">
@@ -373,8 +425,9 @@ export default function AlertPage() {
                     variant
                   </td>
                   <td className="border-border border px-4 py-2">
-                    &quot;default&quot; | &quot;destructive&quot; - controls the
-                    visual style of the alert
+                    &quot;warning&quot; | &quot;error&quot; |
+                    &quot;success&quot; | &quot;secondary&quot; |
+                    &quot;primary&quot; - controls the visual style of the alert
                   </td>
                 </tr>
                 <tr>

@@ -101,6 +101,66 @@ export default function RadioGroupPage() {
             </div>
           </div>
         </section>
+
+        {/* Color Variants Section */}
+        <section>
+          <h2 className="mb-4 text-xl font-semibold">Color Variants</h2>
+          <div className="flex flex-wrap gap-8">
+            <div className="w-72">
+              <h3 className="mb-2 text-lg font-medium">Default</h3>
+              <RadioGroup defaultValue="default">
+                <div className="flex items-center gap-2">
+                  <RadioGroupItem
+                    value="default"
+                    id="color-default"
+                    color="primary"
+                  />
+                  <Label htmlFor="color-default">Default</Label>
+                </div>
+              </RadioGroup>
+            </div>
+            <div className="w-72">
+              <h3 className="mb-2 text-lg font-medium">Destructive</h3>
+              <RadioGroup defaultValue="destructive">
+                <div className="flex items-center gap-2">
+                  <RadioGroupItem
+                    value="destructive"
+                    id="color-destructive"
+                    color="error"
+                  />
+                  <Label htmlFor="color-destructive">Destructive</Label>
+                </div>
+              </RadioGroup>
+            </div>
+            <div className="w-72">
+              <h3 className="mb-2 text-lg font-medium">Warning</h3>
+              <RadioGroup defaultValue="warning">
+                <div className="flex items-center gap-2">
+                  <RadioGroupItem
+                    value="warning"
+                    id="color-warning"
+                    color="warning"
+                  />
+                  <Label htmlFor="color-warning">Warning</Label>
+                </div>
+              </RadioGroup>
+            </div>
+            <div className="w-72">
+              <h3 className="mb-2 text-lg font-medium">Success</h3>
+              <RadioGroup defaultValue="success">
+                <div className="flex items-center gap-2">
+                  <RadioGroupItem
+                    value="success"
+                    id="color-success"
+                    color="success"
+                  />
+                  <Label htmlFor="color-success">Success</Label>
+                </div>
+              </RadioGroup>
+            </div>
+          </div>
+        </section>
+
         {/* Customization Section */}
         <section>
           <h2 className="mb-4 text-xl font-semibold">Customization</h2>
@@ -118,7 +178,7 @@ export default function RadioGroupPage() {
                   <RadioGroupItem
                     value="big"
                     id="s1"
-                    className="size-6"
+                    size="xl"
                   />
                   <Label
                     htmlFor="s1"
@@ -130,7 +190,7 @@ export default function RadioGroupPage() {
                   <RadioGroupItem
                     value="small"
                     id="s2"
-                    className="size-3"
+                    size="xs"
                   />
                   <Label
                     htmlFor="s2"
@@ -262,11 +322,16 @@ export default function RadioGroupPage() {
                     RadioGroupItem
                   </td>
                   <td className="border-border border px-4 py-2 font-mono text-xs">
-                    className, value, disabled, ...props
+                    className, value, disabled, color, size, ...props
                   </td>
                   <td className="border-border border px-4 py-2">
-                    A radio button item. Accepts all props from Radix
-                    RadioGroup.Item.
+                    A radio button item. The color prop can be
+                    &ldquo;primary&rdquo;, &ldquo;secondary&rdquo;,
+                    &ldquo;error&rdquo;, &ldquo;warning&rdquo;, or
+                    &ldquo;success&rdquo;. The size prop can be
+                    &ldquo;xs&rdquo;, &ldquo;sm&rdquo;, &ldquo;md&rdquo;,
+                    &ldquo;lg&rdquo;, or &ldquo;xl&rdquo;. Accepts all props
+                    from Radix RadioGroup.Item.
                   </td>
                 </tr>
               </tbody>

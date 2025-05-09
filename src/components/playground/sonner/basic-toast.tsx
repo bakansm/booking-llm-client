@@ -7,7 +7,7 @@ export function BasicToast() {
   return (
     <Button
       onClick={() => toast("This is a toast notification")}
-      variant="outline">
+      variant="outlined">
       Show Toast
     </Button>
   );

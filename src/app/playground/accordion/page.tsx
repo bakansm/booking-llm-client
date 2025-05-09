@@ -17,9 +17,124 @@ export default function AccordionPage() {
       </div>
 
       <div className="grid gap-10">
+        {/* Variants Section */}
+        <section>
+          <h2 className="mb-4 text-xl font-semibold">Color Variants</h2>
+          <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-2">
+            <div>
+              <h3 className="mb-3 text-lg font-medium">Primary</h3>
+              <Accordion
+                type="single"
+                collapsible
+                variant="primary">
+                <AccordionItem value="item-1">
+                  <AccordionTrigger>Primary Variant</AccordionTrigger>
+                  <AccordionContent>
+                    This accordion uses the primary color variant.
+                  </AccordionContent>
+                </AccordionItem>
+              </Accordion>
+            </div>
+
+            <div>
+              <h3 className="mb-3 text-lg font-medium">Secondary</h3>
+              <Accordion
+                type="single"
+                collapsible
+                variant="secondary">
+                <AccordionItem value="item-1">
+                  <AccordionTrigger>Secondary Variant</AccordionTrigger>
+                  <AccordionContent>
+                    This accordion uses the secondary color variant.
+                  </AccordionContent>
+                </AccordionItem>
+              </Accordion>
+            </div>
+
+            <div>
+              <h3 className="mb-3 text-lg font-medium">Error</h3>
+              <Accordion
+                type="single"
+                collapsible
+                variant="error">
+                <AccordionItem value="item-1">
+                  <AccordionTrigger>Error Variant</AccordionTrigger>
+                  <AccordionContent>
+                    This accordion uses the error color variant.
+                  </AccordionContent>
+                </AccordionItem>
+              </Accordion>
+            </div>
+
+            <div>
+              <h3 className="mb-3 text-lg font-medium">Warning</h3>
+              <Accordion
+                type="single"
+                collapsible
+                variant="warning">
+                <AccordionItem value="item-1">
+                  <AccordionTrigger>Warning Variant</AccordionTrigger>
+                  <AccordionContent>
+                    This accordion uses the warning color variant.
+                  </AccordionContent>
+                </AccordionItem>
+              </Accordion>
+            </div>
+
+            <div>
+              <h3 className="mb-3 text-lg font-medium">Success</h3>
+              <Accordion
+                type="single"
+                collapsible
+                variant="success">
+                <AccordionItem value="item-1">
+                  <AccordionTrigger>Success Variant</AccordionTrigger>
+                  <AccordionContent>
+                    This accordion uses the success color variant.
+                  </AccordionContent>
+                </AccordionItem>
+              </Accordion>
+            </div>
+
+            <div>
+              <h3 className="mb-3 text-lg font-medium">Default</h3>
+              <Accordion
+                type="single"
+                collapsible
+                variant="default">
+                <AccordionItem value="item-1">
+                  <AccordionTrigger>Default Variant</AccordionTrigger>
+                  <AccordionContent>
+                    This accordion uses the default color variant.
+                  </AccordionContent>
+                </AccordionItem>
+              </Accordion>
+            </div>
+
+            <div>
+              <h3 className="mb-3 text-lg font-medium">
+                Individual Trigger Variant
+              </h3>
+              <Accordion
+                type="single"
+                collapsible>
+                <AccordionItem value="item-1">
+                  <AccordionTrigger variant="primary">
+                    Primary Trigger
+                  </AccordionTrigger>
+                  <AccordionContent>
+                    This demonstrates overriding the trigger variant
+                    independently.
+                  </AccordionContent>
+                </AccordionItem>
+              </Accordion>
+            </div>
+          </div>
+        </section>
+
         {/* Basic Usage Section */}
         <section>
-          <h2 className="mb-4 text-xl font-semibold">Basic Usage</h2>
+          <h2 className="mb-4 text-xl font-semibold">Basic Usage (Group)</h2>
           <div className="max-w-xl">
             <Accordion
               type="single"
@@ -42,6 +157,22 @@ export default function AccordionPage() {
                 <AccordionContent>
                   Yes. It&apos;s animated by default, but you can disable it if
                   you prefer.
+                </AccordionContent>
+              </AccordionItem>
+            </Accordion>
+          </div>
+        </section>
+
+        <section>
+          <h2 className="mb-4 text-xl font-semibold">Basic Usage (Single)</h2>
+          <div className="max-w-xl">
+            <Accordion
+              type="single"
+              collapsible>
+              <AccordionItem value="item-1">
+                <AccordionTrigger>Is it accessible?</AccordionTrigger>
+                <AccordionContent>
+                  Yes. It adheres to the WAI-ARIA design pattern.
                 </AccordionContent>
               </AccordionItem>
             </Accordion>
@@ -405,6 +536,18 @@ export default function AccordionPage() {
                 </tr>
                 <tr>
                   <td className="border-border border px-4 py-2 font-mono text-xs">
+                    Accordion
+                  </td>
+                  <td className="border-border border px-4 py-2 font-mono text-xs">
+                    variant
+                  </td>
+                  <td className="border-border border px-4 py-2">
+                    Sets the color scheme of the accordion. Options: default,
+                    primary, secondary, error, warning, success
+                  </td>
+                </tr>
+                <tr>
+                  <td className="border-border border px-4 py-2 font-mono text-xs">
                     AccordionItem
                   </td>
                   <td className="border-border border px-4 py-2 font-mono text-xs">
@@ -424,6 +567,19 @@ export default function AccordionPage() {
                   <td className="border-border border px-4 py-2">
                     When true, prevents the user from interacting with the
                     accordion item
+                  </td>
+                </tr>
+                <tr>
+                  <td className="border-border border px-4 py-2 font-mono text-xs">
+                    AccordionTrigger
+                  </td>
+                  <td className="border-border border px-4 py-2 font-mono text-xs">
+                    variant
+                  </td>
+                  <td className="border-border border px-4 py-2">
+                    Sets the color scheme of the trigger. Overrides the parent
+                    Accordion variant. Options: default, primary, secondary,
+                    error, warning, success
                   </td>
                 </tr>
               </tbody>

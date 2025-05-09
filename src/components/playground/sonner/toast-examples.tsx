@@ -16,7 +16,7 @@ export function FormSubmissionToast() {
           },
         })
       }
-      variant="outline">
+      variant="outlined">
       Submit Form
     </Button>
   );
@@ -40,7 +40,7 @@ export function PromiseToast() {
   return (
     <Button
       onClick={handlePromiseToast}
-      variant="outline">
+      variant="outlined">
       Load Data
     </Button>
   );

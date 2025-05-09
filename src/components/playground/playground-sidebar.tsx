@@ -1,5 +1,6 @@
 "use client";
 
+import { ThemeToggle } from "@/components/playground/theme-toggle";
 import {
   Sidebar,
   SidebarContent,
@@ -27,12 +28,13 @@ export function PlaygroundSidebar({ items }: PlaygroundSidebarProps) {
 
   return (
     <Sidebar collapsible="none">
-      <SidebarHeader className="shrink-0 px-4 py-4">
+      <SidebarHeader className="flex shrink-0 items-center justify-between px-4 py-4">
         <Link
           href="/playground"
           className="flex items-center">
           <span className="text-xl font-bold">UI Components</span>
         </Link>
+        <ThemeToggle />
       </SidebarHeader>
 
       <SidebarContent>

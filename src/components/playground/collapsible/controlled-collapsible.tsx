@@ -17,7 +17,9 @@ export function ControlledCollapsible() {
       open={open}
       onOpenChange={setOpen}>
       <CollapsibleTrigger asChild>
-        <Button variant={open ? "destructive" : "outline"}>
+        <Button
+          variant={open ? "contained" : "outlined"}
+          color={open ? "error" : "primary"}>
           {open ? "Hide" : "Show"} Content
         </Button>
       </CollapsibleTrigger>

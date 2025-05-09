@@ -19,6 +19,90 @@ export default function ProgressPage() {
             <AnimatedProgress />
           </div>
         </section>
+        {/* Color Variants Section */}
+        <section>
+          <h2 className="mb-4 text-xl font-semibold">Color Variants</h2>
+          <div className="flex flex-col gap-4">
+            <div className="w-full max-w-md">
+              <h3 className="mb-2 text-lg font-medium">Primary (Default)</h3>
+              <Progress
+                value={70}
+                color="primary"
+              />
+            </div>
+            <div className="w-full max-w-md">
+              <h3 className="mb-2 text-lg font-medium">Secondary</h3>
+              <Progress
+                value={70}
+                color="secondary"
+              />
+            </div>
+            <div className="w-full max-w-md">
+              <h3 className="mb-2 text-lg font-medium">Success</h3>
+              <Progress
+                value={70}
+                color="success"
+              />
+            </div>
+            <div className="w-full max-w-md">
+              <h3 className="mb-2 text-lg font-medium">Warning</h3>
+              <Progress
+                value={70}
+                color="warning"
+              />
+            </div>
+            <div className="w-full max-w-md">
+              <h3 className="mb-2 text-lg font-medium">Error</h3>
+              <Progress
+                value={70}
+                color="error"
+              />
+            </div>
+          </div>
+        </section>
+        {/* Size Variants Section */}
+        <section>
+          <h2 className="mb-4 text-xl font-semibold">Size Variants</h2>
+          <div className="flex flex-col gap-4">
+            <div className="w-full max-w-md">
+              <h3 className="mb-2 text-lg font-medium">Extra Small (xs)</h3>
+              <Progress
+                value={70}
+                size="xs"
+              />
+            </div>
+            <div className="w-full max-w-md">
+              <h3 className="mb-2 text-lg font-medium">Small (sm)</h3>
+              <Progress
+                value={70}
+                size="sm"
+              />
+            </div>
+            <div className="w-full max-w-md">
+              <h3 className="mb-2 text-lg font-medium">
+                Medium (md - Default)
+              </h3>
+              <Progress
+                value={70}
+                size="md"
+              />
+            </div>
+            <div className="w-full max-w-md">
+              <h3 className="mb-2 text-lg font-medium">Large (lg)</h3>
+              <Progress
+                value={70}
+                size="lg"
+              />
+            </div>
+            <div className="w-full max-w-md">
+              <h3 className="mb-2 text-lg font-medium">Extra Large (xl)</h3>
+              <Progress
+                value={70}
+                size="xl"
+              />
+            </div>
+          </div>
+        </section>
         {/* Variants Section */}
         <section>
           <h2 className="mb-4 text-xl font-semibold">Variants</h2>
@@ -52,10 +136,10 @@ export default function ProgressPage() {
               </div>
             </div>
             <div className="w-72">
-              <h3 className="mb-2 text-lg font-medium">Small Height</h3>
+              <h3 className="mb-2 text-lg font-medium">Custom Height</h3>
               <Progress
                 value={40}
-                className="h-1"
+                className="h-1.5"
               />
             </div>
           </div>
@@ -71,7 +155,11 @@ export default function ProgressPage() {
                   <span className="text-sm">Uploading file...</span>
                   <span className="text-muted-foreground text-xs">45%</span>
                 </div>
-                <Progress value={45} />
+                <Progress
+                  value={45}
+                  color="primary"
+                  size="sm"
+                />
               </div>
             </div>
             <div className="flex flex-col gap-4">
@@ -81,7 +169,11 @@ export default function ProgressPage() {
                   <span className="text-sm">Tasks Completed</span>
                   <span className="text-muted-foreground text-xs">3/5</span>
                 </div>
-                <Progress value={60} />
+                <Progress
+                  value={60}
+                  color="success"
+                  size="md"
+                />
               </div>
             </div>
           </div>
@@ -121,6 +213,37 @@ export default function ProgressPage() {
                   <td className="border-border border px-4 py-2">
                     The current progress value (0-100). If not set, shows
                     indeterminate state.
+                  </td>
+                </tr>
+                <tr>
+                  <td className="border-border border px-4 py-2 font-mono text-xs">
+                    color
+                  </td>
+                  <td className="border-border border px-4 py-2 font-mono text-xs">
+                    &quot;primary&quot; | &quot;secondary&quot; |
+                    &quot;success&quot; | &quot;warning&quot; |
+                    &quot;error&quot;
+                  </td>
+                  <td className="border-border border px-4 py-2 font-mono text-xs">
+                    &quot;primary&quot;
+                  </td>
+                  <td className="border-border border px-4 py-2">
+                    The color variant of the progress bar.
+                  </td>
+                </tr>
+                <tr>
+                  <td className="border-border border px-4 py-2 font-mono text-xs">
+                    size
+                  </td>
+                  <td className="border-border border px-4 py-2 font-mono text-xs">
+                    &quot;xs&quot; | &quot;sm&quot; | &quot;md&quot; |
+                    &quot;lg&quot; | &quot;xl&quot;
+                  </td>
+                  <td className="border-border border px-4 py-2 font-mono text-xs">
+                    &quot;md&quot;
+                  </td>
+                  <td className="border-border border px-4 py-2">
+                    The size (height) of the progress bar.
                   </td>
                 </tr>
                 <tr>

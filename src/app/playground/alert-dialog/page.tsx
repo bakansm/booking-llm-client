@@ -29,7 +29,7 @@ export default function AlertDialogPage() {
           <div className="flex flex-wrap gap-4">
             <AlertDialog>
               <AlertDialogTrigger asChild>
-                <Button variant="outline">Show Alert Dialog</Button>
+                <Button variant="outlined">Show Alert Dialog</Button>
               </AlertDialogTrigger>
               <AlertDialogContent>
                 <AlertDialogHeader>
@@ -55,7 +55,11 @@ export default function AlertDialogPage() {
             {/* Destructive */}
             <AlertDialog>
               <AlertDialogTrigger asChild>
-                <Button variant="destructive">Delete Item</Button>
+                <Button
+                  variant="contained"
+                  color="error">
+                  Delete Item
+                </Button>
               </AlertDialogTrigger>
               <AlertDialogContent>
                 <AlertDialogHeader>
@@ -101,7 +105,7 @@ export default function AlertDialogPage() {
           <div className="flex flex-wrap gap-4">
             <AlertDialog>
               <AlertDialogTrigger asChild>
-                <Button variant="outline">With Form</Button>
+                <Button variant="outlined">With Form</Button>
               </AlertDialogTrigger>
               <AlertDialogContent className="sm:max-w-md">
                 <AlertDialogHeader>
@@ -147,7 +151,7 @@ export default function AlertDialogPage() {
 
             <AlertDialog>
               <AlertDialogTrigger asChild>
-                <Button variant="outline">With Icon</Button>
+                <Button variant="outlined">With Icon</Button>
               </AlertDialogTrigger>
               <AlertDialogContent>
                 <div className="flex justify-center pt-2 pb-4">
@@ -206,7 +210,11 @@ export default function AlertDialogPage() {
               <div className="flex flex-wrap gap-4">
                 <AlertDialog>
                   <AlertDialogTrigger asChild>
-                    <Button variant="destructive">Delete Account</Button>
+                    <Button
+                      variant="contained"
+                      color="error">
+                      Delete Account
+                    </Button>
                   </AlertDialogTrigger>
                   <AlertDialogContent>
                     <AlertDialogHeader>
@@ -242,7 +250,7 @@ export default function AlertDialogPage() {
               <div className="flex flex-wrap gap-4">
                 <AlertDialog>
                   <AlertDialogTrigger asChild>
-                    <Button variant="outline">Logout</Button>
+                    <Button variant="outlined">Logout</Button>
                   </AlertDialogTrigger>
                   <AlertDialogContent>
                     <AlertDialogHeader>

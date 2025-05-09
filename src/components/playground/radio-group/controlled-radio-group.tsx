@@ -16,6 +16,8 @@ export function ControlledRadioGroup() {
           <RadioGroupItem
             value="option-1"
             id="c1"
+            color="primary"
+            size="md"
           />
           <Label htmlFor="c1">Option 1</Label>
         </div>
@@ -23,6 +25,8 @@ export function ControlledRadioGroup() {
           <RadioGroupItem
             value="option-2"
             id="c2"
+            color="error"
+            size="md"
           />
           <Label htmlFor="c2">Option 2</Label>
         </div>
@@ -30,6 +34,8 @@ export function ControlledRadioGroup() {
           <RadioGroupItem
             value="option-3"
             id="c3"
+            color="success"
+            size="md"
           />
           <Label htmlFor="c3">Option 3</Label>
         </div>

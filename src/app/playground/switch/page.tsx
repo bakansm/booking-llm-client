@@ -55,6 +55,72 @@ export default function SwitchPage() {
             </div>
           </div>
         </section>
+        {/* Sizes Section */}
+        <section>
+          <h2 className="mb-4 text-xl font-semibold">Sizes</h2>
+          <div className="flex flex-col gap-4">
+            <div className="flex items-center gap-2">
+              <Switch
+                size="xs"
+                id="size-xs"
+                defaultChecked
+              />
+              <label
+                htmlFor="size-xs"
+                className="text-sm">
+                Extra Small (xs)
+              </label>
+            </div>
+            <div className="flex items-center gap-2">
+              <Switch
+                size="sm"
+                id="size-sm"
+                defaultChecked
+              />
+              <label
+                htmlFor="size-sm"
+                className="text-sm">
+                Small (sm)
+              </label>
+            </div>
+            <div className="flex items-center gap-2">
+              <Switch
+                size="md"
+                id="size-md"
+                defaultChecked
+              />
+              <label
+                htmlFor="size-md"
+                className="text-sm">
+                Medium (md) - Default
+              </label>
+            </div>
+            <div className="flex items-center gap-2">
+              <Switch
+                size="lg"
+                id="size-lg"
+                defaultChecked
+              />
+              <label
+                htmlFor="size-lg"
+                className="text-sm">
+                Large (lg)
+              </label>
+            </div>
+            <div className="flex items-center gap-2">
+              <Switch
+                size="xl"
+                id="size-xl"
+                defaultChecked
+              />
+              <label
+                htmlFor="size-xl"
+                className="text-sm">
+                Extra Large (xl)
+              </label>
+            </div>
+          </div>
+        </section>
         {/* Customization Section */}
         <section>
           <h2 className="mb-4 text-xl font-semibold">Customization</h2>
@@ -74,6 +140,95 @@ export default function SwitchPage() {
                 className="ml-2 text-sm">
                 Large switch
               </label>
+            </div>
+            <div className="w-72">
+              <h3 className="mb-2 text-lg font-medium">Custom Colors</h3>
+              <div className="flex flex-col gap-4">
+                <div className="flex items-center gap-2">
+                  <Switch
+                    id="custom-unchecked"
+                    checked={false}
+                  />
+                  <label
+                    htmlFor="custom-unchecked"
+                    className="text-sm">
+                    Unchecked: sub-background, thumb: background
+                  </label>
+                </div>
+                <div className="flex items-center gap-2">
+                  <Switch
+                    id="custom-checked"
+                    checked
+                  />
+                  <label
+                    htmlFor="custom-checked"
+                    className="text-sm">
+                    Checked: primary, thumb: foreground
+                  </label>
+                </div>
+                <div className="flex flex-col gap-2">
+                  <div className="flex items-center gap-2">
+                    <Switch
+                      checked
+                      color="primary"
+                      id="color-primary"
+                    />
+                    <label
+                      htmlFor="color-primary"
+                      className="text-sm">
+                      Checked: primary
+                    </label>
+                  </div>
+                  <div className="flex items-center gap-2">
+                    <Switch
+                      checked
+                      color="secondary"
+                      id="color-secondary"
+                    />
+                    <label
+                      htmlFor="color-secondary"
+                      className="text-sm">
+                      Checked: secondary
+                    </label>
+                  </div>
+                  <div className="flex items-center gap-2">
+                    <Switch
+                      checked
+                      color="success"
+                      id="color-success"
+                    />
+                    <label
+                      htmlFor="color-success"
+                      className="text-sm">
+                      Checked: success
+                    </label>
+                  </div>
+                  <div className="flex items-center gap-2">
+                    <Switch
+                      checked
+                      color="error"
+                      id="color-error"
+                    />
+                    <label
+                      htmlFor="color-error"
+                      className="text-sm">
+                      Checked: error
+                    </label>
+                  </div>
+                  <div className="flex items-center gap-2">
+                    <Switch
+                      checked
+                      color="warning"
+                      id="color-warning"
+                    />
+                    <label
+                      htmlFor="color-warning"
+                      className="text-sm">
+                      Checked: warning
+                    </label>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         </section>
@@ -188,6 +343,51 @@ export default function SwitchPage() {
                   </td>
                   <td className="border-border border px-4 py-2">
                     Additional classes for the switch container.
+                  </td>
+                </tr>
+                <tr>
+                  <td className="border-border border px-4 py-2 font-mono text-xs">
+                    thumbClassName
+                  </td>
+                  <td className="border-border border px-4 py-2 font-mono text-xs">
+                    string
+                  </td>
+                  <td className="border-border border px-4 py-2 font-mono text-xs">
+                    -
+                  </td>
+                  <td className="border-border border px-4 py-2">
+                    Additional classes for the switch thumb.
+                  </td>
+                </tr>
+                <tr>
+                  <td className="border-border border px-4 py-2 font-mono text-xs">
+                    color
+                  </td>
+                  <td className="border-border border px-4 py-2 font-mono text-xs">
+                    &quot;default&quot; | &quot;primary&quot; |
+                    &quot;secondary&quot; | &quot;success&quot; |
+                    &quot;error&quot; | &quot;warning&quot;
+                  </td>
+                  <td className="border-border border px-4 py-2 font-mono text-xs">
+                    &quot;default&quot;
+                  </td>
+                  <td className="border-border border px-4 py-2">
+                    Changes the color of the switch when checked.
+                  </td>
+                </tr>
+                <tr>
+                  <td className="border-border border px-4 py-2 font-mono text-xs">
+                    size
+                  </td>
+                  <td className="border-border border px-4 py-2 font-mono text-xs">
+                    &quot;xs&quot; | &quot;sm&quot; | &quot;md&quot; |
+                    &quot;lg&quot; | &quot;xl&quot;
+                  </td>
+                  <td className="border-border border px-4 py-2 font-mono text-xs">
+                    &quot;md&quot;
+                  </td>
+                  <td className="border-border border px-4 py-2">
+                    Controls the size of the switch.
                   </td>
                 </tr>
                 <tr>

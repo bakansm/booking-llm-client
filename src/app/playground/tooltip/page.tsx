@@ -22,7 +22,7 @@ export default function TooltipPage() {
           <div className="flex max-w-md items-center gap-4">
             <Tooltip>
               <TooltipTrigger asChild>
-                <Button variant="outline">Hover me</Button>
+                <Button variant="outlined">Hover me</Button>
               </TooltipTrigger>
               <TooltipContent>Tooltip content</TooltipContent>
             </Tooltip>
@@ -36,7 +36,7 @@ export default function TooltipPage() {
               <h3 className="mb-2 text-lg font-medium">With Arrow</h3>
               <Tooltip>
                 <TooltipTrigger asChild>
-                  <Button variant="outline">With Arrow</Button>
+                  <Button variant="outlined">With Arrow</Button>
                 </TooltipTrigger>
                 <TooltipContent>Tooltip with arrow</TooltipContent>
               </Tooltip>
@@ -45,7 +45,7 @@ export default function TooltipPage() {
               <h3 className="mb-2 text-lg font-medium">Custom Offset</h3>
               <Tooltip>
                 <TooltipTrigger asChild>
-                  <Button variant="outline">Offset 12px</Button>
+                  <Button variant="outlined">Offset 12px</Button>
                 </TooltipTrigger>
                 <TooltipContent sideOffset={12}>Offset 12px</TooltipContent>
               </Tooltip>
@@ -54,7 +54,7 @@ export default function TooltipPage() {
               <h3 className="mb-2 text-lg font-medium">Placement</h3>
               <Tooltip>
                 <TooltipTrigger asChild>
-                  <Button variant="outline">Right</Button>
+                  <Button variant="outlined">Right</Button>
                 </TooltipTrigger>
                 <TooltipContent side="right">Tooltip on right</TooltipContent>
               </Tooltip>
@@ -69,7 +69,7 @@ export default function TooltipPage() {
               <h3 className="mb-2 text-lg font-medium">Custom Color</h3>
               <Tooltip>
                 <TooltipTrigger asChild>
-                  <Button variant="outline">Custom Color</Button>
+                  <Button variant="outlined">Custom Color</Button>
                 </TooltipTrigger>
                 <TooltipContent className="bg-green-600 text-white">
                   Green tooltip
@@ -80,7 +80,7 @@ export default function TooltipPage() {
               <h3 className="mb-2 text-lg font-medium">Long Content</h3>
               <Tooltip>
                 <TooltipTrigger asChild>
-                  <Button variant="outline">Long Content</Button>
+                  <Button variant="outlined">Long Content</Button>
                 </TooltipTrigger>
                 <TooltipContent className="max-w-xs">
                   This is a longer tooltip content that wraps to multiple lines
@@ -100,8 +100,8 @@ export default function TooltipPage() {
                 <Tooltip>
                   <TooltipTrigger asChild>
                     <Button
-                      variant="ghost"
-                      size="icon"
+                      variant="text"
+                      icon
                       aria-label="Edit">
                       ✏️
                     </Button>
@@ -111,8 +111,8 @@ export default function TooltipPage() {
                 <Tooltip>
                   <TooltipTrigger asChild>
                     <Button
-                      variant="ghost"
-                      size="icon"
+                      variant="text"
+                      icon
                       aria-label="Delete">
                       🗑️
                     </Button>
@@ -132,8 +132,8 @@ export default function TooltipPage() {
                 <Tooltip>
                   <TooltipTrigger asChild>
                     <Button
-                      variant="ghost"
-                      size="icon"
+                      variant="text"
+                      icon
                       aria-label="Help">
                       ?
                     </Button>

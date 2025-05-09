@@ -11,7 +11,7 @@ export function CustomDurationToast() {
           duration: 2000,
         })
       }
-      variant="outline">
+      variant="outlined">
       Short Duration (2s)
     </Button>
   );
@@ -28,7 +28,7 @@ export function ActionToast() {
           },
         })
       }
-      variant="outline">
+      variant="outlined">
       With Action
     </Button>
   );
